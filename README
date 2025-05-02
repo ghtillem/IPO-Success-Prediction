@@ -11,7 +11,7 @@ Many IPOs underperform in the months following their public listing. This projec
 
 ## 📁 Repository Structure
 
-```
+
 📦ipo-success-prediction
 ├── fse_capstone_final_code.py             # Main data pipeline for SEC EDGAR parsing & preprocessing
 ├── company_age_analysis.py                # Analysis on how company age affects IPO success
@@ -20,7 +20,7 @@ Many IPOs underperform in the months following their public listing. This projec
 ├── data/                                  # Expected folder for intermediate processed CSVs (not included here)
 ├── notebooks/                             # (Optional) Jupyter/Colab notebooks for EDA or demos
 └── README.md                              # This file
-```
+
 
 ---
 
@@ -103,8 +103,3 @@ This project was completed as part of the capstone requirement for the M.S. in D
 
 Special thanks to Professor Joshua Loughman for his guidance and support throughout the project.
 
----
-
-## 📬 Contact
-
-Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/pandey-shraddha) or GitHub issues for questions or collaborations!
