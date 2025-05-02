@@ -1,1 +1,110 @@
 #code here uses 6 main data sources and was built between Colabs and ASU Sol
+# 🚀 IPO Success Prediction using Machine Learning
+
+This repository contains the full pipeline and analysis for a capstone project aimed at predicting the short- and long-term success of Initial Public Offerings (IPOs) using structured financial disclosures, macroeconomic indicators, and market sentiment features.
+
+## 📌 Project Summary
+
+Many IPOs underperform in the months following their public listing. This project builds a robust, interpretable machine learning framework to predict IPO success within 6 months and 3 years of listing. It integrates data from SEC EDGAR filings, stock performance, and economic conditions to help investors and analysts evaluate IPO viability.
+
+---
+
+## 📁 Repository Structure
+
+```
+📦ipo-success-prediction
+├── fse_capstone_final_code.py             # Main data pipeline for SEC EDGAR parsing & preprocessing
+├── company_age_analysis.py                # Analysis on how company age affects IPO success
+├── macro_feature_analysis.py              # Analysis of inflation, interest rates, and S&P sentiment features
+├── models/                                # Placeholder for trained model artifacts (e.g. LightGBM, NN)
+├── data/                                  # Expected folder for intermediate processed CSVs (not included here)
+├── notebooks/                             # (Optional) Jupyter/Colab notebooks for EDA or demos
+└── README.md                              # This file
+```
+
+---
+
+## 📊 Data Sources
+
+- **SEC EDGAR**: S-1, 10-K, and 10-Q filings
+- **Yahoo Finance**: IPO stock price history (IPO date, +6M, +3Y)
+- **FRED**: Federal Funds Rate, Inflation
+- **S&P 500**: Price vs 30/50/200-day SMAs as sentiment proxies
+
+---
+
+## 🛠 Features Engineered
+
+- **Financial**: Net margin, revenue growth (YoY/QoQ), asset turnover, debt-to-equity, cash ratio, ROC trends across 1Y–3Y
+- **Macroeconomic**: Inflation, Fed rate at IPO date
+- **Market Sentiment**: Relative position of S&P 500 index to its moving averages
+- **Company Metadata**: SIC codes, incorporation age, filing frequency
+
+---
+
+## 🤖 Models Used
+
+| Model        | 6-Month AUC | 3-Year AUC | Notes                           |
+|--------------|-------------|------------|---------------------------------|
+| LightGBM     | 0.7509      | 0.7714     | Best overall performance        |
+| Neural Net   | 0.6777      | 0.7056     | Tuned with Optuna & PCA         |
+
+Both models were trained using:
+- Cross-validation with class imbalance handling
+- Hyperparameter tuning via **Optuna**
+- Feature importance analysis using **SHAP**
+
+---
+
+## 💹 Investment Simulation
+
+To test the real-world utility of our predictions, we ran a simulated investment strategy:
+
+- **Initial Capital**: $100,000
+- **Agents**: Random, LightGBM, NN, Ensemble
+- **Rules**: $100–200 per IPO based on predicted label
+
+📈 **LightGBM Agent Profit**: `$61,116`  
+📉 **Random Agent Profit**: `$6,334`  
+This confirmed that model-guided investing yielded superior ROI.
+
+---
+
+## 📈 Key Findings
+
+- IPOs performed better when launched during **low inflation (<2%)**.
+- Companies younger than **20 years** showed higher 3-year success.
+- Contrary to expectations, IPOs when **S&P 500 was below SMA** did better.
+- **Liquidity and macro factors** were more important than pure revenue growth.
+
+---
+
+## ⚠️ Limitations
+
+- U.S.-only scope
+- No unstructured text analysis (e.g., S-1 sentiment)
+- Predictive power varies across sectors
+- Requires periodic retraining due to macroeconomic shifts
+
+---
+
+## 📌 Future Work
+
+- Add NLP on S-1 filings using SEC-BERT or FinBERT
+- Sector-specific model tuning (Tech, Healthcare, etc.)
+- Deploy model via REST API or interactive Streamlit dashboard
+- Extend to global IPOs (Europe, India, Asia-Pacific)
+
+---
+
+## 👨‍🏫 Acknowledgment
+
+This project was completed as part of the capstone requirement for the M.S. in Data Science, Analytics and Engineering at Arizona State University.
+
+Special thanks to **Professor Joshua Loughman** for his guidance and support throughout the project.
+
+---
+
+## 📬 Contact
+
+Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/pandey-shraddha) or GitHub issues for questions or collaborations!
