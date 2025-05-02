@@ -26,19 +26,19 @@ Many IPOs underperform in the months following their public listing. This projec
 
 ## 📊 Data Sources
 
-- **SEC EDGAR**: S-1, 10-K, and 10-Q filings
-- **Yahoo Finance**: IPO stock price history (IPO date, +6M, +3Y)
-- **FRED**: Federal Funds Rate, Inflation
-- **S&P 500**: Price vs 30/50/200-day SMAs as sentiment proxies
+- SEC EDGAR: S-1, 10-K, and 10-Q filings
+- Yahoo Finance: IPO stock price history (IPO date, +6M, +3Y)
+- FRED: Federal Funds Rate, Inflation
+- S&P 500: Price vs 30/50/200-day SMAs as sentiment proxies
 
 ---
 
 ## 🛠 Features Engineered
 
-- **Financial**: Net margin, revenue growth (YoY/QoQ), asset turnover, debt-to-equity, cash ratio, ROC trends across 1Y–3Y
-- **Macroeconomic**: Inflation, Fed rate at IPO date
-- **Market Sentiment**: Relative position of S&P 500 index to its moving averages
-- **Company Metadata**: SIC codes, incorporation age, filing frequency
+- Financial: Net margin, revenue growth (YoY/QoQ), asset turnover, debt-to-equity, cash ratio, ROC trends across 1Y–3Y
+- Macroeconomic: Inflation, Fed rate at IPO date
+- Market Sentiment: Relative position of S&P 500 index to its moving averages
+- Company Metadata: SIC codes, incorporation age, filing frequency
 
 ---
 
@@ -60,22 +60,22 @@ Both models were trained using:
 
 To test the real-world utility of our predictions, we ran a simulated investment strategy:
 
-- **Initial Capital**: $100,000
-- **Agents**: Random, LightGBM, NN, Ensemble
-- **Rules**: $100–200 per IPO based on predicted label
+- Initial Capital: $100,000
+- Agents: Random, LightGBM, NN, Ensemble
+- Rules: $100–200 per IPO based on predicted label
 
-📈 **LightGBM Agent Profit**: `$61,116`  
-📉 **Random Agent Profit**: `$6,334`  
+📈 LightGBM Agent Profit: `$61,116`  
+📉 Random Agent Profit: `$6,334`  
 This confirmed that model-guided investing yielded superior ROI.
 
 ---
 
 ## 📈 Key Findings
 
-- IPOs performed better when launched during **low inflation (<2%)**.
-- Companies younger than **20 years** showed higher 3-year success.
-- Contrary to expectations, IPOs when **S&P 500 was below SMA** did better.
-- **Liquidity and macro factors** were more important than pure revenue growth.
+- IPOs performed better when launched during low inflation (<2%).
+- Companies younger than 20 years showed higher 3-year success.
+- Contrary to expectations, IPOs when S&P 500 was below SMA did better.
+- Liquidity and macro factors** were more important than pure revenue growth.
 
 ---
 
@@ -101,7 +101,7 @@ This confirmed that model-guided investing yielded superior ROI.
 
 This project was completed as part of the capstone requirement for the M.S. in Data Science, Analytics and Engineering at Arizona State University.
 
-Special thanks to **Professor Joshua Loughman** for his guidance and support throughout the project.
+Special thanks to Professor Joshua Loughman for his guidance and support throughout the project.
 
 ---
 
