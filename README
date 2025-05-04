@@ -27,9 +27,11 @@ Many IPOs underperform in the months following their public listing. This projec
 ## 📊 Data Sources
 
 - SEC EDGAR: S-1, 10-K, and 10-Q filings
-- Yahoo Finance: IPO stock price history (IPO date, +6M, +3Y)
+- SEC CIK to Ticker .json and .txt
+- EODHD: IPO stock price history (IPO date, +6M, +3Y)
 - FRED: Federal Funds Rate, Inflation
-- S&P 500: Price vs 30/50/200-day SMAs as sentiment proxies
+- S&P 500: Price vs 30/50/200-day SMAs as sentiment proxies - Yahoo Finance
+- Opencorporates: extratcing date of incorperation to determine company age at IPO open.
 
 ---
 
