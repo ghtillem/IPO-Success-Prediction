@@ -1,18 +1,18 @@
 #code here uses 6 main data sources and was built between Colabs and ASU Sol
-# 🚀 IPO Success Prediction using Machine Learning
+# IPO Success Prediction using Machine Learning
 
 This repository contains the full pipeline and analysis for a capstone project aimed at predicting the short- and long-term success of Initial Public Offerings (IPOs) using structured financial disclosures, macroeconomic indicators, and market sentiment features.
 
-## 📌 Project Summary
+## Project Summary
 
 Many IPOs underperform in the months following their public listing. This project builds a robust, interpretable machine learning framework to predict IPO success within 6 months and 3 years of listing. It integrates data from SEC EDGAR filings, stock performance, and economic conditions to help investors and analysts evaluate IPO viability.
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 
-📦ipo-success-prediction
+ipo-success-prediction
 ├── fse_capstone_final_code.py             # Main data pipeline for SEC EDGAR parsing & preprocessing
 ├── company_age_analysis.py                # Analysis on how company age affects IPO success
 ├── macro_feature_analysis.py              # Analysis of inflation, interest rates, and S&P sentiment features
@@ -24,7 +24,7 @@ Many IPOs underperform in the months following their public listing. This projec
 
 ---
 
-## 📊 Data Sources
+## Data Sources
 
 - SEC EDGAR: S-1, 10-K, and 10-Q filings
 - SEC CIK to Ticker .json and .txt
@@ -35,7 +35,7 @@ Many IPOs underperform in the months following their public listing. This projec
 
 ---
 
-## 🛠 Features Engineered
+## Features Engineered
 
 - Financial: Net margin, revenue growth (YoY/QoQ), asset turnover, debt-to-equity, cash ratio, ROC trends across 1Y–3Y
 - Macroeconomic: Inflation, Fed rate at IPO date
@@ -44,7 +44,7 @@ Many IPOs underperform in the months following their public listing. This projec
 
 ---
 
-## 🤖 Models Used
+## Models Used
 
 | Model        | 6-Month AUC | 3-Year AUC | Notes                           |
 |--------------|-------------|------------|---------------------------------|
@@ -58,7 +58,7 @@ Both models were trained using:
 
 ---
 
-## 💹 Investment Simulation
+## Investment Simulation
 
 To test the real-world utility of our predictions, we ran a simulated investment strategy:
 
@@ -66,13 +66,13 @@ To test the real-world utility of our predictions, we ran a simulated investment
 - Agents: Random, LightGBM, NN, Ensemble
 - Rules: $100–200 per IPO based on predicted label
 
-📈 LightGBM Agent Profit: `$61,116`  
-📉 Random Agent Profit: `$6,334`  
+ LightGBM Agent Profit: `$61,116`  
+ Random Agent Profit: `$6,334`  
 This confirmed that model-guided investing yielded superior ROI.
 
 ---
 
-## 📈 Key Findings
+## Key Findings
 
 - IPOs performed better when launched during low inflation (<2%).
 - Companies younger than 20 years showed higher 3-year success.
@@ -81,7 +81,7 @@ This confirmed that model-guided investing yielded superior ROI.
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 - U.S.-only scope
 - No unstructured text analysis (e.g., S-1 sentiment)
@@ -90,7 +90,7 @@ This confirmed that model-guided investing yielded superior ROI.
 
 ---
 
-## 📌 Future Work
+## Future Work
 
 - Add NLP on S-1 filings using SEC-BERT or FinBERT
 - Sector-specific model tuning (Tech, Healthcare, etc.)
@@ -99,7 +99,7 @@ This confirmed that model-guided investing yielded superior ROI.
 
 ---
 
-## 👨‍🏫 Acknowledgment
+## Acknowledgment
 
 This project was completed as part of the capstone requirement for the M.S. in Data Science, Analytics and Engineering at Arizona State University.
 
